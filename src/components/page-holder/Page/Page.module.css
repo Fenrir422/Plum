@@ -1,0 +1,33 @@
+.page_holder {
+  display: grid;
+  grid-template-columns: 0.3fr 5fr 5fr;
+  background-color: #39383657;
+  background-image: url(../../../images/uroboros.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* .logo {
+  background-color: #fcac2221;
+  background-image: url(./uroboros.png);
+  background-repeat: no-repeat;
+  background-position: center;
+} */
+
+.logo img {
+  opacity: 0.03;
+
+}
+
+.page {
+  margin-top:20px;
+  margin-left:20px;
+  margin-right: 20px;
+  width: 840px;
+  height: 1200px;
+  background-image: url(../../../images/page_examp.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+

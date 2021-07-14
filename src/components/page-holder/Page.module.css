@@ -1,0 +1,66 @@
+.page_holder {
+  display: grid;
+  grid-template-columns: 5fr 1fr 5fr;
+}
+
+.logo {
+  background-color: #fcac2221;
+  background-image: url(./uroboros.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.logo img {
+  opacity: 0.03;
+
+}
+
+.menu_wrapper {
+  margin-top:300px;
+  padding:5px;
+  /* justify-self: start; */
+  width: 100px;
+  background-color:#22348ea3;
+  height: 175px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-self: end;
+  width: 100px;
+  height: 100%;
+  border-radius: 2px; 
+  grid-auto-rows: auto;
+}
+
+.item { 
+  border-top: 1px solid #0c10349e;
+  border-bottom: 1px solid #13192f;
+  border-right: 1px solid #13192f;
+  border-left: 1px solid #0c10349e;
+  border-radius: 2px; 
+  background-color: #12182ee8;
+}
+
+.item:hover {
+  border-bottom:1px solid #dfaf26;
+  cursor: pointer;
+  border-radius: 2px;
+  background-color:#22348ea3;
+}
+
+.page {
+  margin-top:20px;
+  margin-left:20px;
+  width: 740px;
+  height: 889px;
+  background-image: url(./page_examp.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+

@@ -1,0 +1,10 @@
+.page_holder {
+  display: grid;
+  grid-template-columns: 0.3fr 10fr;
+  background-color: #39383657;
+  background-image: url(../../../images/uroboros.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+

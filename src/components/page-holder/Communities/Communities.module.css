@@ -1,0 +1,12 @@
+.page_holder {
+    height: 1200px;
+}
+
+.community_Group{
+    background-color: red;
+
+}
+.Units_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}

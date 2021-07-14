@@ -1,0 +1,11 @@
+
+.books_wrapper {
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-gap: 1em;
+}
+
+.selected_page { 
+ font-weight: bold;
+}
+

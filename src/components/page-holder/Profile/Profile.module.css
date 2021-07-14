@@ -1,0 +1,31 @@
+.ProfileWrapper {
+    background-color: #39383657;
+    background-image: url(../../../images/uroboros.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 1161px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 7fr;
+}
+
+.profilePhoto{
+    margin: 10px;
+    width: 400px;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.profilePhotoWrapper{
+    background-color: rgba(184, 172, 172, 0.555);
+    margin: 30px;
+}
+
+.profileName {
+    font-size: 40px;
+    text-align: left;
+}
+
+
+.libraryWrapper{ 
+    grid-column: 1/4;
+}
