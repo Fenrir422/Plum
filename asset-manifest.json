@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Plum/static/css/main.7a9b47d9.chunk.css",
+    "main.css": "/Plum/static/css/main.06e0433a.chunk.css",
     "main.js": "/Plum/static/js/main.2f5ec474.chunk.js",
     "main.js.map": "/Plum/static/js/main.2f5ec474.chunk.js.map",
     "runtime-main.js": "/Plum/static/js/runtime-main.683548be.js",
@@ -8,9 +8,9 @@
     "static/js/2.c4051c68.chunk.js": "/Plum/static/js/2.c4051c68.chunk.js",
     "static/js/2.c4051c68.chunk.js.map": "/Plum/static/js/2.c4051c68.chunk.js.map",
     "index.html": "/Plum/index.html",
-    "precache-manifest.5a53f560fc494eaa348b80233beaaa4c.js": "/Plum/precache-manifest.5a53f560fc494eaa348b80233beaaa4c.js",
+    "precache-manifest.4c9b8382613a2f7d10ac215c73ef1150.js": "/Plum/precache-manifest.4c9b8382613a2f7d10ac215c73ef1150.js",
     "service-worker.js": "/Plum/service-worker.js",
-    "static/css/main.7a9b47d9.chunk.css.map": "/Plum/static/css/main.7a9b47d9.chunk.css.map",
+    "static/css/main.06e0433a.chunk.css.map": "/Plum/static/css/main.06e0433a.chunk.css.map",
     "static/media/comment.png": "/Plum/static/media/comment.90863081.png",
     "static/media/Page.module.css": "/Plum/static/media/page_examp.69eedac7.png",
     "static/media/settings.png": "/Plum/static/media/settings.4ff1f710.png",
