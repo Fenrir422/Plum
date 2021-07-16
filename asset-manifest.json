@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Plum/static/css/main.06e0433a.chunk.css",
-    "main.js": "/Plum/static/js/main.2f5ec474.chunk.js",
-    "main.js.map": "/Plum/static/js/main.2f5ec474.chunk.js.map",
-    "runtime-main.js": "/Plum/static/js/runtime-main.683548be.js",
-    "runtime-main.js.map": "/Plum/static/js/runtime-main.683548be.js.map",
-    "static/js/2.c4051c68.chunk.js": "/Plum/static/js/2.c4051c68.chunk.js",
-    "static/js/2.c4051c68.chunk.js.map": "/Plum/static/js/2.c4051c68.chunk.js.map",
-    "index.html": "/Plum/index.html",
-    "precache-manifest.4c9b8382613a2f7d10ac215c73ef1150.js": "/Plum/precache-manifest.4c9b8382613a2f7d10ac215c73ef1150.js",
-    "service-worker.js": "/Plum/service-worker.js",
-    "static/css/main.06e0433a.chunk.css.map": "/Plum/static/css/main.06e0433a.chunk.css.map",
-    "static/media/comment.png": "/Plum/static/media/comment.90863081.png",
-    "static/media/Page.module.css": "/Plum/static/media/page_examp.69eedac7.png",
-    "static/media/settings.png": "/Plum/static/media/settings.4ff1f710.png",
-    "static/media/BookShop.module.css": "/Plum/static/media/uroboros.e557c77a.png",
-    "static/media/usergal.png": "/Plum/static/media/usergal.25a553fc.png"
+    "main.css": "/Plummet/static/css/main.f2f3485b.chunk.css",
+    "main.js": "/Plummet/static/js/main.e49fd38c.chunk.js",
+    "main.js.map": "/Plummet/static/js/main.e49fd38c.chunk.js.map",
+    "runtime-main.js": "/Plummet/static/js/runtime-main.f43caba9.js",
+    "runtime-main.js.map": "/Plummet/static/js/runtime-main.f43caba9.js.map",
+    "static/js/2.c4051c68.chunk.js": "/Plummet/static/js/2.c4051c68.chunk.js",
+    "static/js/2.c4051c68.chunk.js.map": "/Plummet/static/js/2.c4051c68.chunk.js.map",
+    "index.html": "/Plummet/index.html",
+    "precache-manifest.dc289be589b03dfeffc38e98428ac645.js": "/Plummet/precache-manifest.dc289be589b03dfeffc38e98428ac645.js",
+    "service-worker.js": "/Plummet/service-worker.js",
+    "static/css/main.f2f3485b.chunk.css.map": "/Plummet/static/css/main.f2f3485b.chunk.css.map",
+    "static/media/comment.png": "/Plummet/static/media/comment.90863081.png",
+    "static/media/Page.module.css": "/Plummet/static/media/page_examp.69eedac7.png",
+    "static/media/settings.png": "/Plummet/static/media/settings.4ff1f710.png",
+    "static/media/BookShop.module.css": "/Plummet/static/media/uroboros.e557c77a.png",
+    "static/media/usergal.png": "/Plummet/static/media/usergal.25a553fc.png"
   }
 }
