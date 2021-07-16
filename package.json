@@ -1,8 +1,8 @@
 {
   "name": "my",
+  "homepage":"https://fenrir422.github.io/Plummet/",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://fenrir422.github.io/Plum/",
   "dependencies": {
     "axios": "^0.19.2",
     "react": "^16.9.0",

@@ -9,12 +9,13 @@ import './index.css'
 
 
 export let renderEntireTree = () => {
-ReactDOM.render(<BrowserRouter>
+    ReactDOM.render(<BrowserRouter basename={process.env.PUBLIC_URL}>
                     <Provider store={store}>
                         <App />
                     </Provider>
                 </BrowserRouter>,
-                     document.getElementById('root'));
+                     document.getElementById('root')
+    );
 };
 
 

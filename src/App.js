@@ -30,9 +30,9 @@ class App extends React.Component {
   componentDidUpdate() {
   }
   render () {
-    if (!this.props.initialaized){
-      return <Loader loaderCenter={true}/>
-    }
+    // if (!this.props.initialaized){
+    //   return <Loader loaderCenter={true}/>
+    // }
     return (
       <div className="App">
         <HeaderContainer/>
@@ -45,7 +45,7 @@ class App extends React.Component {
           <Route path='/friends' render ={()=><FriendsContainer />}/>
           <Route path='/login' render={()=><LoginContainer />}/>
           <Route path='/profile/:userId?' render={()=><ProfileContainerWithUrl />}/>
-          <Route path='/poligon' render={()=><Poligon />}/>
+          {/* <Route path='/poligon' render={()=><Poligon />}/> */}
           
         </div>
       </div>

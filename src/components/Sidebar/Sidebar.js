@@ -13,7 +13,7 @@ function Sidebar() {
           <NavLink to='/friends' className={classes.item}>Friends</NavLink>
           <NavLink to='/communities' className={classes.item}>- Communities -</NavLink>
           <NavLink to='/store' className={classes.item}>Store</NavLink>
-          <NavLink to='/poligon' className={classes.item}>Poligon</NavLink>
+          {/* <NavLink to='/poligon' className={classes.item}>Poligon</NavLink> */}
           
           <div></div>
           
