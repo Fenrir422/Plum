@@ -57,6 +57,10 @@ export const ProfileApi = {
   updateStatus(status){
     return instance.put(`profile/status`, {status})
   },
+  
+  SetProfile(profile){
+    return instance.put(`profile`, profile)
+  },
 
   setMainPhoto(photoFile) {
     var formData = new FormData();

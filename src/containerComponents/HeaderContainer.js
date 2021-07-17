@@ -21,6 +21,7 @@ class HeaderContainer extends React.Component {
                         hideMenuButton={this.props.hideMenuButton}
                         LogoutThunk={this.props.LogoutThunk}
                         isAuth={this.props.isAuth}
+                        fullName={this.props.fullName}
                 />
             </>
     }
@@ -28,6 +29,7 @@ class HeaderContainer extends React.Component {
 
 let mapStateToProps =(store)=> {
     return {
+        fullName: store.profileStore.fullName,
         store:store.authStore,
         showMenu:store.authStore.showMenu,
         isAuth:store.authStore.isAuth

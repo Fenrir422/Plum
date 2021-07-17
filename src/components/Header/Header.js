@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import classes from './Header.module.css';
 
-function Header(props) {
+function Header({fullName,...props}) {
   console.log(props.isAuth, ' isath')
 
 
@@ -19,7 +19,7 @@ function Header(props) {
               <img src={props.props.store.navPhoto} className={classes.navPhoto}/>
               <div >
                 <NavLink to={'/profile'} className={classes.loginName}>
-                  <span>{props.props.store.login}</span>
+                  <span>{fullName}</span>
                 </NavLink>
               </div>
               <div onClick={props.showMenu ? ()=>props.hideMenuButton() : ()=>props.showMenuButton()} className={classes.hiddenMenuSign} > ▼ </div>
@@ -35,7 +35,7 @@ function Header(props) {
 
               {props.isAuth && props.showMenu ?
                 <div className={classes.loginMenu}>
-                  <NavLink to={'/Profile'} className={classes.loginMenuElement}>Settings</NavLink>
+                  <NavLink to={'/Profile'} className={classes.loginMenuElement} onClick={()=>props.hideMenuButton()}>Settings</NavLink>
                   <div className={classes.loginMenuElement}>some1</div>
                   <div className={classes.loginMenuElement}>some2</div>
                   <button className={classes.loginMenuElement} onClick={()=>props.LogoutThunk()}>Logout</button>

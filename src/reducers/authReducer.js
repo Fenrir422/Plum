@@ -98,7 +98,8 @@ export const LogoutThunk = () => {
     return (dispatch) =>{
         Logout().then(data=>{
             if(data.resultCode === 0 ){
-                dispatch(setUserData(logoutData, isAuth)) 
+                dispatch(setUserData(logoutData, isAuth))
+                dispatch(hideMenuButton())
             }
         })
     }

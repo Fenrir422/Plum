@@ -29,3 +29,15 @@
 .libraryWrapper{ 
     grid-column: 1/4;
 }
+
+.greenButton{
+    width: 30px;
+    height: 20px;
+    background-color: green;
+}
+
+.yellowButton{
+    width: 30px;
+    height: 20px;
+    background-color: yellow;
+}
