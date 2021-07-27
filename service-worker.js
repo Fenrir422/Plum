@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Plummet/precache-manifest.6f6e759caaeb21838bf717968c32b2dc.js"
+  "/Plummet/precache-manifest.eaa5a4a0df3523954a76267d867cc7b7.js"
 );
 
 self.addEventListener('message', (event) => {

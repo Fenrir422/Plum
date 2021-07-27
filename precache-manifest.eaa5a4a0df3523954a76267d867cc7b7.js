@@ -1,23 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "eb7535b6b1457eccd85788d00e65cebb",
+    "revision": "d2135eb05e8dd781e7e39a6ea10be855",
     "url": "/Plummet/index.html"
   },
   {
-    "revision": "ea73c7dc61098829476a",
-    "url": "/Plummet/static/css/main.b3148d71.chunk.css"
+    "revision": "34593957d865628fb2ee",
+    "url": "/Plummet/static/css/main.368ee602.chunk.css"
   },
   {
-    "revision": "750d87dab2232879b447",
-    "url": "/Plummet/static/js/2.d475ef3d.chunk.js"
+    "revision": "8be0a067eb11b9500d86",
+    "url": "/Plummet/static/js/2.d365ec23.chunk.js"
   },
   {
-    "revision": "ea73c7dc61098829476a",
-    "url": "/Plummet/static/js/main.17c28cb2.chunk.js"
+    "revision": "34593957d865628fb2ee",
+    "url": "/Plummet/static/js/main.69ee7017.chunk.js"
   },
   {
     "revision": "c1072a5215d9246138f4",
     "url": "/Plummet/static/js/runtime-main.f43caba9.js"
+  },
+  {
+    "revision": "b8e09f0e855675d95b4ca1280ed2eae5",
+    "url": "/Plummet/static/media/arrow.b8e09f0e.png"
   },
   {
     "revision": "90863081d318145c82f02817d131c22d",
@@ -26,6 +30,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "69eedac73c0e24bdfd2cc0f929b472e9",
     "url": "/Plummet/static/media/page_examp.69eedac7.png"
+  },
+  {
+    "revision": "05244de531c5768fa1cfa3eed64cce3a",
+    "url": "/Plummet/static/media/photo.05244de5.png"
   },
   {
     "revision": "4ff1f710e2031c8877fa8bb316e4cf3d",
