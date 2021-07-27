@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d2135eb05e8dd781e7e39a6ea10be855",
+    "revision": "c4d408560e97b81fcef605496f823607",
     "url": "/Plummet/index.html"
   },
   {
-    "revision": "34593957d865628fb2ee",
-    "url": "/Plummet/static/css/main.368ee602.chunk.css"
+    "revision": "5afb176dc0d23c08e8cf",
+    "url": "/Plummet/static/css/main.a91c6620.chunk.css"
   },
   {
-    "revision": "8be0a067eb11b9500d86",
-    "url": "/Plummet/static/js/2.d365ec23.chunk.js"
+    "revision": "c10bee87675c852c7423",
+    "url": "/Plummet/static/js/2.bac94dce.chunk.js"
   },
   {
-    "revision": "34593957d865628fb2ee",
-    "url": "/Plummet/static/js/main.69ee7017.chunk.js"
+    "revision": "5afb176dc0d23c08e8cf",
+    "url": "/Plummet/static/js/main.6b9fb25e.chunk.js"
   },
   {
     "revision": "c1072a5215d9246138f4",
@@ -26,6 +26,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "90863081d318145c82f02817d131c22d",
     "url": "/Plummet/static/media/comment.90863081.png"
+  },
+  {
+    "revision": "d2a46f5d97ead6527e4ebab08582e69c",
+    "url": "/Plummet/static/media/cross.d2a46f5d.png"
+  },
+  {
+    "revision": "59ed3a0a1b7ac37e7388f97e2daaa3b7",
+    "url": "/Plummet/static/media/library.59ed3a0a.png"
   },
   {
     "revision": "69eedac73c0e24bdfd2cc0f929b472e9",
