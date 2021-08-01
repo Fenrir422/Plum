@@ -42,6 +42,11 @@ export const Authorisation =()=>{
   })
 }
 
+export const getCaptcha = () => {
+  return instance.get(`security/get-captcha-url`)
+}
+
+
 export const ProfileApi = {
   getProfile(userId){
     return instance.get(`profile/${userId}`)
@@ -76,8 +81,8 @@ export const ProfileApi = {
 
 
 
-export const Login =(email, password, rememberMe)=>{
-  return instance.post(`auth/login`, {email, password, rememberMe})
+export const Login =(email, password, rememberMe, captcha)=>{
+  return instance.post(`auth/login`, {email, password, rememberMe, captcha})
   .then(res=>{return res.data})
 }
 

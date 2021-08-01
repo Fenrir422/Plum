@@ -38,6 +38,19 @@ const LoginForm =(props)=>{
                     />
                             <span className={classes.checkBoxText}>Remember Me</span>
             </div>
+
+
+            {props.captcha && 
+            <div>
+                <div><img src={props.captcha}/></div>
+                <div >  <Field  className={classes.formField} 
+                            component={Input} 
+                            name={"captcha"}
+                            validate={[required]}
+                    />
+            </div>
+            </div>
+            }
             <div className={classes.buttonsWrapper}>
                 <div><button className={classes.loginButton}>Sign In</button></div>
                 <div className={classes.registrationButton}>Sign Up</div>
@@ -50,10 +63,10 @@ const LoginForm =(props)=>{
 const LoginReduxForm = reduxForm ({form:'login'}) (LoginForm)
 
 const Login=(props)=>{
-    console.log(props.isFetching, 'fetching')
     const onSubmit = (FormData) =>{
-        let {email, password, rememberMe } = FormData
-        props.LoginThunk(email, password, rememberMe)
+        console.log(FormData)
+        let {email, password, rememberMe, captcha} = FormData
+        props.LoginThunk(email, password, rememberMe, captcha)
     }
     return(
         <div className={classes.LoginWrapper}>
@@ -61,7 +74,7 @@ const Login=(props)=>{
             <div className={classes.LoginForm}>
                 <span className={classes.logo}>Plummet</span>
                 <h1>Sign In</h1>
-                <LoginReduxForm onSubmit={onSubmit} />
+                <LoginReduxForm onSubmit={onSubmit} captcha={props.captcha}/>
             </div>
             <div className={classes.Loader}>{props.isFetching? <Loader loaderCenter={false}/>: null}</div>
             

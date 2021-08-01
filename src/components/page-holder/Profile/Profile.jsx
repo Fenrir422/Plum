@@ -1,9 +1,12 @@
 import classes from './Profile.module.css'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import userImg from '../../../images/usergal.png'
 import ProfileStatusWithHooks from './ProfileStatusWithHooks'
 import ProfileMenu from './ProfileMenu/ProfileMenu'
 import ProfileDataReduxForm from './ProfileForm'
+import AccountSettings from './ProfileSettings/AccountSettings'
+import ProfileData from './ProfileData'
+import ProfileLibraryContainer from '../../../containerComponents/ProfileLibraryContainer'
 
 
 
@@ -11,13 +14,30 @@ import ProfileDataReduxForm from './ProfileForm'
 
 
 const Profile =({userId, authId, setMainPhoto, profileData,...props})=>{
-    console.log(profileData, 'safafaawfafwfwa')
 
-    let [ProfileEditMode, setProfileEditMode] =useState(false);
+    const [SettingsToggle, setSettingsToggle] = useState(false);
+    const [LibraryToggle, setLibraryToggle] = useState(false);
+    const [selectedText, setSelectedText] = useState(false);
 
-    const toggleProfileEditMode =()=>{
-        setProfileEditMode(!ProfileEditMode)
+    
+    const onMouseUp =()=>{
+        setSelectedText(window.getSelection().toString())
     }
+
+    useEffect (() => {
+        document.addEventListener("selectionchange", onMouseUp)
+        return () => {document.removeEventListener("selectionchange", onMouseUp)}
+    }, [])
+
+
+    const saveSelectedText = () => {
+        alert(selectedText)
+    }
+
+    const activateSettings =()=> {
+        setSettingsToggle(!SettingsToggle)
+    }   
+
 
     let isOwner = null;
 
@@ -31,64 +51,42 @@ const Profile =({userId, authId, setMainPhoto, profileData,...props})=>{
         }
     }
 
-    let [ToggleOn, setToggle] = useState(false)
-    
-
     const libraryToggle =()=>{
-        setToggle(!ToggleOn);
+        setLibraryToggle(!LibraryToggle);
     }
 
     const onSubmit = (FormData) =>{
         console.log(FormData, 'aboutMe')
         props.setProfileDataThunk(FormData)
-        toggleProfileEditMode()
+        activateSettings()
     }
-    
 
 
     return(
         <div className={classes.ProfileWrapper}>
-            <ProfileMenu libraryToggle={libraryToggle} />
-            <div>
-                <div className={classes.profilePhotoWrapper}><img src={profileData.photos.large ? profileData.photos.large : userImg} className={classes.profilePhoto}/></div>
-                {props.isAuth && isOwner && <input type={'file'} onChange={onMainPhotoSelect}/>}
-                <div>status: {profileData.status}</div>
-                
-                <div className={classes.greenButton} onClick={()=>toggleProfileEditMode()}>{ProfileEditMode? 'Edit' : 'Save'}</div>
-                {ProfileEditMode ? 
-                    <ProfileDataReduxForm profileData={profileData} initialValues={profileData} onSubmit={onSubmit}/>
-                    :
-                    <div>
-                        <div><b>About me: </b>{profileData.aboutMe}</div>
-                        <div><b>Looking for a job: </b>{profileData.lookingForAJob ? 'yes' : 'no' }</div>
-                        <div>
-                            {profileData.contacts?
-                            <div>
-                                <b>Contacts:</b> {Object.keys(profileData.contacts).map(key=>{
-                                return <Contacts key={key} contactTitle={key} contactValue={profileData.contacts[key]}/>
-                                })}
-                            </div>
-                            :'loading...'}
-                        </div>
-                    </div>}
+            {/* side-platemenu */}
+            {props.isAuth && isOwner ? <ProfileMenu libraryToggle={libraryToggle} activateSettings={activateSettings}/>: <div></div>}
+            
+            {props.isAuth && isOwner && SettingsToggle ? <AccountSettings activateSettings={activateSettings} profileData={profileData} onSubmit={onSubmit} onMainPhotoSelect={onMainPhotoSelect}/> : null}
+            <div className={classes.ProfileDataWrapper}>
+                <div className={classes.profilePhotoWrapper}>
+                    <img src={profileData.photos.large ? profileData.photos.large : userImg} className={classes.profilePhoto}/>
+                </div>
+                <ProfileData profileData={profileData}/>
                 
             </div>
-            <div>
+            <div className={classes.profieContent}>
+                
+                {selectedText ? <button onClick={saveSelectedText}>kek</button> :null}
+
                 <div className={classes.profileName}>{profileData.fullName}</div>
                 <ProfileStatusWithHooks updateStatus={props.updateStatus} props={props} status={profileData.status}/>
+                {props.isAuth && isOwner && LibraryToggle ? <ProfileLibraryContainer /> : null}
             </div>
-            {ToggleOn ? <div className={classes.libraryWrapper}> тут буде бібліотека </div> : null}
-            
+              
         </div>
     )
 }
 
-const Contacts =({contactTitle, contactValue})=>{
-    return(
-        <div>
-            <b>{contactTitle}</b> : {contactValue}
-        </div>
-    )
-}
 
 export default Profile

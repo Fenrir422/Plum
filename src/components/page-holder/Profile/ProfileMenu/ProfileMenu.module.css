@@ -14,7 +14,7 @@
   grid-template-columns: repeat(1, 1fr);
   justify-self: start;
   width: 120px;
-  height: 680px;
+  height: 720px;
   /* height: 100%; */
   border-radius: 2px; 
   grid-auto-rows: auto;
@@ -29,13 +29,21 @@
 }
 
 .menu_item {
-  height: 133px;
+  height: 118px;
   border-top: 1px solid grey;
   border-bottom: 1px solid grey;
   border-right: 1px solid grey;
   border-left: 1px solid grey;
   border-radius: 2px; 
   background-color: #202022;
+  justify-content: center;
+  display: grid;
+}
+
+.menu_item img {
+  align-self: center;
+  width: 70px;
+  height: 70px;
 }
 
 .menu_item:hover {

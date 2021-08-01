@@ -34,7 +34,7 @@ const ProfileStatusWithHooks =(props)=> {
 
     return(
         <div>
-            <div>
+            <div className={classes.profileStatusWrapper}>
                 {editMode ?
                 <div>
                     <input onChange={onStatusChange} autoFocus={true} onBlur={deactivateEditMode} value={status}/>

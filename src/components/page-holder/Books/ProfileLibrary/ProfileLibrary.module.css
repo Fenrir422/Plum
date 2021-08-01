@@ -1,0 +1,29 @@
+.profileLibraryWrapper{
+    border-top: 1px solid #202022;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.libraryItem {
+    background-color: rgba(128, 128, 128, 0.644);
+    font-size: 10px;
+    width: 110px;
+    margin: 10px;
+    height:max-content;
+    padding: 10px;
+}
+.libraryItemContent{
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    height: max-content;
+    max-height: 200px;
+}
+
+.libraryItem span{
+    font-size: 10px;
+}
+
+.libraryItem img{
+    width: 100px;
+    height: 140px;
+}

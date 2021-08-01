@@ -11,7 +11,8 @@ import { compose } from "redux";
 const mapStateToProps =(store)=>{
     return{
         loginData: store.authStore,
-        isFetching: store.authStore.isFetching
+        isFetching: store.authStore.isFetching,
+        captcha:store.authStore.captcha
     }
 }
 

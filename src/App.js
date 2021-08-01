@@ -5,7 +5,7 @@ import Page from './components/page-holder/Page/Page';
 import Books from './components/page-holder/Books/Books'
 import CommunitiesWrapper from './components/page-holder/Communities/CommunitiesWrapper'
 import FriendsContainer from './containerComponents/FriendsContainer'
-import {Route} from "react-router-dom";
+import {Redirect, Route} from "react-router-dom";
 import BookShop from './components/page-holder/Store/BookShop';
 import HeaderContainer from './containerComponents/HeaderContainer';
 import LoginContainer from './containerComponents/LoginContainer'
@@ -29,15 +29,17 @@ class App extends React.Component {
 
   componentDidUpdate() {
   }
-  render () {
-    // if (!this.props.initialaized){
-    //   return <Loader loaderCenter={true}/>
-    // }
+  render () 
+  {
+    if (!this.props.initialaized){
+      return <Loader loaderCenter={true}/>
+    }
     return (
       <div className="App">
         <HeaderContainer/>
         <div className="app-wrapper">
           <Sidebar />
+          <Route path='/' render = {()=> <Redirect to={"/login"} /> }/>
           <Route path='/books' render = {()=> <Books /> }/>
           <Route path='/page' render = {()=> <Page />}/>
           <Route path='/communities' render = {()=> <CommunitiesWrapper />}/>

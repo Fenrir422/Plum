@@ -1,0 +1,15 @@
+.profileDataWrapper {
+    text-align: left;
+}
+
+.contactsItem{
+    margin-left: 10px;
+    font-size: 10px;
+}
+.profileDataItem {
+    background-color: rgba(128, 128, 128, 0.424);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+

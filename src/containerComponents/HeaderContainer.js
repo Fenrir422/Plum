@@ -29,10 +29,10 @@ class HeaderContainer extends React.Component {
 
 let mapStateToProps =(store)=> {
     return {
-        fullName: store.profileStore.fullName,
         store:store.authStore,
         showMenu:store.authStore.showMenu,
-        isAuth:store.authStore.isAuth
+        isAuth:store.authStore.isAuth,
+        fullName: store.authStore.fullName
     }
 }
 

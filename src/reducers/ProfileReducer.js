@@ -16,9 +16,7 @@ let initialState = {
 
 const profileReducer =(state=initialState, action)=>{
     switch(action.type){
-        
         case 'SET-NAME':
-            debugger;
             return{
                 
                 ...state,
@@ -30,13 +28,11 @@ const profileReducer =(state=initialState, action)=>{
                 status:action.status
             }
         case 'SET-PHOTO':
-            debugger;
             return {
                 ...state,
                 photos: action.photoFile
             }
         case 'SET-PROFILE-DATA':
-            debugger;
             return {
                 ...state,
                 ...action.profile
