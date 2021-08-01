@@ -1,23 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c4d408560e97b81fcef605496f823607",
+    "revision": "ade56fe9c820a10a3dd2457294ea42dd",
     "url": "/Plummet/index.html"
   },
   {
-    "revision": "5afb176dc0d23c08e8cf",
-    "url": "/Plummet/static/css/main.a91c6620.chunk.css"
+    "revision": "f5a16e12d492ce11345d",
+    "url": "/Plummet/static/css/main.b940b0cb.chunk.css"
   },
   {
-    "revision": "c10bee87675c852c7423",
-    "url": "/Plummet/static/js/2.bac94dce.chunk.js"
+    "revision": "79f40dca806b922ecf53",
+    "url": "/Plummet/static/js/2.1c315158.chunk.js"
   },
   {
-    "revision": "5afb176dc0d23c08e8cf",
-    "url": "/Plummet/static/js/main.6b9fb25e.chunk.js"
+    "revision": "f5a16e12d492ce11345d",
+    "url": "/Plummet/static/js/main.2af60db0.chunk.js"
   },
   {
     "revision": "c1072a5215d9246138f4",
     "url": "/Plummet/static/js/runtime-main.f43caba9.js"
+  },
+  {
+    "revision": "14a53e357bd4af36ac3cb5f51e6021a4",
+    "url": "/Plummet/static/media/Poe-The-Raven.14a53e35.pdf"
   },
   {
     "revision": "b8e09f0e855675d95b4ca1280ed2eae5",
