@@ -47,7 +47,7 @@ class App extends React.Component {
           <Route path='/friends' render ={()=><FriendsContainer />}/>
           <Route path='/login' render={()=><LoginContainer />}/>
           <Route path='/profile/:userId?' render={()=><ProfileContainerWithUrl />}/>
-          {/* <Route path='/poligon' render={()=><Poligon />}/> */}
+          <Route path='/poligon' render={()=><Poligon />}/>
           
         </div>
       </div>

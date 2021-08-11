@@ -1,0 +1,8 @@
+.readerWrapper {
+    display: grid;
+    justify-items: center;
+}
+
+.react-pdf__Page__canvas{
+    height: 1000px;
+}

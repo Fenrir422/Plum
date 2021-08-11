@@ -6,7 +6,6 @@ import classes from './ProfileLibrary.module.css';
 
 const ProfileLibrary = (props) => {
     console.log(props.LibraryItems)
-    
     return (
       <div >
           <b>My Library</b>
@@ -16,6 +15,7 @@ const ProfileLibrary = (props) => {
                         <div className={classes.libraryItemContent}>
                             <div> <img src={i.coverURL}/></div>
                             <span>{i.name}</span>
+                            {Math.random()}
                         </div>
                         
                 </div>

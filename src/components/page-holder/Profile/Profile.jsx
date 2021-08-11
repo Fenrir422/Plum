@@ -7,6 +7,7 @@ import ProfileDataReduxForm from './ProfileForm'
 import AccountSettings from './ProfileSettings/AccountSettings'
 import ProfileData from './ProfileData'
 import ProfileLibraryContainer from '../../../containerComponents/ProfileLibraryContainer'
+import Reader from '../Page/Reader/Reader'
 
 
 
@@ -17,22 +18,8 @@ const Profile =({userId, authId, setMainPhoto, profileData,...props})=>{
 
     const [SettingsToggle, setSettingsToggle] = useState(false);
     const [LibraryToggle, setLibraryToggle] = useState(false);
-    const [selectedText, setSelectedText] = useState(false);
-
-    
-    const onMouseUp =()=>{
-        setSelectedText(window.getSelection().toString())
-    }
-
-    useEffect (() => {
-        document.addEventListener("selectionchange", onMouseUp)
-        return () => {document.removeEventListener("selectionchange", onMouseUp)}
-    }, [])
 
 
-    const saveSelectedText = () => {
-        alert(selectedText)
-    }
 
     const activateSettings =()=> {
         setSettingsToggle(!SettingsToggle)
@@ -77,8 +64,6 @@ const Profile =({userId, authId, setMainPhoto, profileData,...props})=>{
             </div>
             <div className={classes.profieContent}>
                 
-                {selectedText ? <button onClick={saveSelectedText}>kek</button> :null}
-
                 <div className={classes.profileName}>{profileData.fullName}</div>
                 <ProfileStatusWithHooks updateStatus={props.updateStatus} props={props} status={profileData.status}/>
                 {props.isAuth && isOwner && LibraryToggle ? <ProfileLibraryContainer /> : null}

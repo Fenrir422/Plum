@@ -10,6 +10,24 @@ let initialState = {
 }
 
 const fragmentReducer = (state=initialState, action)=>{
+    switch(action.type){
+        case 'ADD-FRAGMENT':
+            return{
+                ...state,
+                fragments:[...state.fragments, {
+                    book: 'HP', 
+                    writer:'hz', 
+                    group:'fantasy', 
+                    content: action.fragment
+                }]
+            }
+    }
+    
     return state;
 }
+
+
+export const addFragment = (fragment)=> ({type:'ADD-FRAGMENT', fragment});
+
+
 export default fragmentReducer;

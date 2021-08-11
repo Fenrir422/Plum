@@ -9,6 +9,8 @@ import Loader from '../../common/FormControl/Loader/Loader';
 
 
 const Friends = (props) => {
+    console.log(props.users)
+
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
     let pages = [];
     for (let i=1; i<=pagesCount; i++) {
@@ -37,7 +39,7 @@ const Friends = (props) => {
                   <div><img src={u.photos.small ? u.photos.small : ifNull} className={classes.image} /></div>
               </NavLink>
               <div> 
-                
+                <div>{u.groupIndex}</div>
                 {u.followed 
                   ?
                   <button disabled={props.followingProgress.some(id=>id===u.id)} onClick={()=>{
@@ -59,12 +61,7 @@ const Friends = (props) => {
         </div>
       </div>
       {props.isFetching? <Loader loaderCenter={false}/> : null}
-      {/* <div className={classes.FetchingWrapper}>
-                  {props.isFetching ?
-                          <div className={classes.loader}></div>
-                      :null
-                  }
-      </div> */}
+
       <div>
         
       </div>
@@ -76,12 +73,3 @@ const Friends = (props) => {
   }
 
 export default Friends;
-
-
-// props.followingInProgress(true, u.id);
-//                     unfollowUser(u.id).then(data=>{
-//                       {
-//                         props.unfollow(u.id)
-//                       }
-//                       props.followingInProgress(false, u.id)
-//                     })

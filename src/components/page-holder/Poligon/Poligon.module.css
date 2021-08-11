@@ -1,0 +1,7 @@
+.pageWrapper {
+    align-items: center;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    font-size: 40px;
+}

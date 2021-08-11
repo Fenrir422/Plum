@@ -8,12 +8,14 @@ let initialState = {
         {GroupName: 'Anatomy', id:'4124124', group:'4', photo:'http://makelsan.com.ua/wp-content/uploads/2018/01/Vitruvian-Man-00.jpg'}
     ],
     GroupOneUnits: [
-        {Name:'Infection course', members:'13', newMessages:'2'},
-        {Name:'Anatomy', members:'26', newMessages:'1'},
+        {Name:'Infection course', members:null, newMessages:'2'},
+        {Name:'Anatomy', members:null, newMessages:'1'},
     ],
     GroupTwoUnits: [
-        {name: 'Life of Pi', members:'2', newMessages:'22'}
+        {name: 'Life of Pi', members:null, newMessages:'22'}
     ],
+
+
     users: [
         {name:'gosha', id:'1234', photos:'https://image.shutterstock.com/image-vector/thin-line-user-icon-on-260nw-519039097.jpg', group:'4'},
         {name:'sveta', id:'3214', photos:'https://image.shutterstock.com/image-vector/thin-line-user-icon-on-260nw-519039097.jpg', group:'4'},
@@ -21,7 +23,11 @@ let initialState = {
         {name:'misha', id:'2314', photos:'https://image.shutterstock.com/image-vector/thin-line-user-icon-on-260nw-519039097.jpg', group:'3'},
         {name:'vovan', id:'3241', photos:'https://image.shutterstock.com/image-vector/thin-line-user-icon-on-260nw-519039097.jpg', group:'4'},
 
-    ]
+    ],
+
+    currentPage: null,
+    pageSize:null
+
 }
 
 const communitiesReducer = (state=initialState, action) => {
@@ -36,4 +42,5 @@ const communitiesReducer = (state=initialState, action) => {
     }
      
 }
+
 export default communitiesReducer;

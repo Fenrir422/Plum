@@ -9,7 +9,7 @@ import { getUsers, unfollowUser, followUser } from '../api/api'
 
 
 let initialState = {
-    users:[{name:'gosha', id:'15215125125', photos:'https://image.shutterstock.com/image-vector/thin-line-user-icon-on-260nw-519039097.jpg',followed:true},
+    users:[{name:'gosha', id:'15215125125', photos:{small:null}, followed:true},
             {name:'sasha', id:'152151255', photos:{small:null},followed:false},
 
           ],
@@ -18,16 +18,43 @@ let initialState = {
     totalUsersCount: 30,
     currentPage:1, 
     isFollowed: true,
-    followingProgress: []
+    followingProgress: [],
+    communityMembers:[
+        {name:'sveta', id:'3214', photos:null, groupIndex:null},
+        {name:'vasya', id:'2341', photos:null, groupIndex:null},
+    ]
+    
 }
 
 const friendListReducer = (state=initialState, action) => {
+
+
+    
     switch(action.type){
+        case 'SET-COMMUNITY-MEMBERS':
+            return {
+                ...state,
+                communityMembers: action.users
+            };
+
+        case 'SET-COMMUNITY-MEMBERS':
+            return {
+                ...state,
+                communityMembers: action.users
+            };
+
         case 'SET-FRIENDS': 
             return {
                 ...state,
                 users: action.users
             };
+
+        case 'SET-FRIENDS': 
+            return {
+                ...state,
+                users: action.users
+            };
+
         case 'SET-CURRENT-PAGE':
             return{
                 ...state,
@@ -66,16 +93,32 @@ const friendListReducer = (state=initialState, action) => {
                 : state.followingProgress.filter(id=>id!=action.userId)
             }
             default: return state;
+            
     }
+    
+       
 }
 
+export const setCommunityMembers = (users)=> ({type:'SET-COMMUNITY-MEMBERS', users});
 
-export const getUsersThunkCreator = (pageSize,currentPage)=> async (dispatch)=> {
+
+const getUsersThunkCreator = async (dispatch,pageSize,currentPage,actionCreator)=> {
         dispatch(toggleIsFetching(true));
         dispatch(setCurrentPage(currentPage))
         const response = await getUsers(pageSize, currentPage)
-            dispatch(setFriends(response.items))
+            dispatch(actionCreator(response.items))
             dispatch(toggleIsFetching(false));
+}
+
+export const setFriendsThunk = (pageSize,currentPage)=> async (dispatch)=>{
+    const actionCreator = setFriends;
+    getUsersThunkCreator(dispatch, pageSize, currentPage, actionCreator)
+}
+
+
+export const setCommunityMembersThunk = (pageSize,currentPage)=> async (dispatch)=>{
+    const actionCreator = setCommunityMembers;
+    getUsersThunkCreator(dispatch, pageSize, currentPage, actionCreator)
 }
 
 export const unfollowThunkCreator = (id)=> async (dispatch)=> {
