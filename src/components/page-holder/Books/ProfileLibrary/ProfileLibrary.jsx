@@ -5,7 +5,6 @@ import classes from './ProfileLibrary.module.css';
 
 
 const ProfileLibrary = (props) => {
-    console.log(props.LibraryItems)
     return (
       <div >
           <b>My Library</b>

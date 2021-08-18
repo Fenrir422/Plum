@@ -8,7 +8,6 @@ const ProfileDataForm =(props)=>{
     const descriptionToggle=()=>{
         skillDescription=!skillDescription
     }
-    console.log(skillDescription, 'хм')
 
     return(
         <form onSubmit={props.handleSubmit} className={classes.accountSettingsForm}>

@@ -3,7 +3,7 @@ import booksListReducer from "../reducers/booksListReduser";
 import booksStoreListReducer from "../reducers/booksStoreListReducer";
 import { createStore, combineReducers, applyMiddleware} from "redux";
 import fragmentReducer from "../reducers/fragmentReducer";
-import friendsListReducer from '../reducers/friendsListReducer'
+import usersReducer from '../reducers/usersReducer'
 import communitiesReducer from '../reducers/communitiesReducer'
 import authReducer from "../reducers/authReducer";
 import thunkMiddleware from 'redux-thunk'
@@ -17,7 +17,7 @@ let reducers = combineReducers(
         fragmentsStore: fragmentReducer,
         booksStore: booksListReducer,
         booksShopStore: booksStoreListReducer,
-        usersStore: friendsListReducer,
+        usersStore: usersReducer,
         communityStore: communitiesReducer,
         authStore:authReducer,
         profileStore: profileReducer,

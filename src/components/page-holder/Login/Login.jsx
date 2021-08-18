@@ -64,7 +64,6 @@ const LoginReduxForm = reduxForm ({form:'login'}) (LoginForm)
 
 const Login=(props)=>{
     const onSubmit = (FormData) =>{
-        console.log(FormData)
         let {email, password, rememberMe, captcha} = FormData
         props.LoginThunk(email, password, rememberMe, captcha)
     }

@@ -22,7 +22,6 @@ let initialState = {
 const authReducer = (state=initialState, action) => {
     switch(action.type) {
         case 'SET-USER-DATA':
-            console.log(action.data, action.isAuth)
             return {
                 ...state,
                 ...action.authData,

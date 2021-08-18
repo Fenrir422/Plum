@@ -43,7 +43,6 @@ const Profile =({userId, authId, setMainPhoto, profileData,...props})=>{
     }
 
     const onSubmit = (FormData) =>{
-        console.log(FormData, 'aboutMe')
         props.setProfileDataThunk(FormData)
         activateSettings()
     }

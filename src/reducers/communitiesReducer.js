@@ -15,19 +15,9 @@ let initialState = {
         {name: 'Life of Pi', members:null, newMessages:'22'}
     ],
 
-
-    users: [
-        {name:'gosha', id:'1234', photos:'https://image.shutterstock.com/image-vector/thin-line-user-icon-on-260nw-519039097.jpg', group:'4'},
-        {name:'sveta', id:'3214', photos:'https://image.shutterstock.com/image-vector/thin-line-user-icon-on-260nw-519039097.jpg', group:'4'},
-        {name:'vasya', id:'2341', photos:'https://image.shutterstock.com/image-vector/thin-line-user-icon-on-260nw-519039097.jpg', group:'3'},
-        {name:'misha', id:'2314', photos:'https://image.shutterstock.com/image-vector/thin-line-user-icon-on-260nw-519039097.jpg', group:'3'},
-        {name:'vovan', id:'3241', photos:'https://image.shutterstock.com/image-vector/thin-line-user-icon-on-260nw-519039097.jpg', group:'4'},
-
-    ],
-
     currentPage: null,
-    pageSize:null
-
+    pageSize:null,
+    lalka:null
 }
 
 const communitiesReducer = (state=initialState, action) => {
@@ -37,10 +27,18 @@ const communitiesReducer = (state=initialState, action) => {
                 ...state,
                 users: action.users
             };
+        case 'SET-GROUP-MEMBERS':
+            return {
+                ...state,
+                sortedGroupMembers: action.users
+            };
         default:
             return state;
     }
      
 }
 
+
 export default communitiesReducer;
+
+

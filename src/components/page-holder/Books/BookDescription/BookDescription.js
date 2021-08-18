@@ -6,7 +6,6 @@ import classes from './BookDescription.module.css';
  
 
 const BookDescription = (props) => {
-  console.log(props, 'OMGOMG')
     const id = props.match.params.id
     const selectedBook = props.books.find(b => b.id === id)
     return (

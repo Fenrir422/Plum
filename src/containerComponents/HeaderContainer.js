@@ -10,7 +10,6 @@ class HeaderContainer extends React.Component {
 
     componentDidUpdate(prevProps, prevState){
         if (this.props.isAuth !== prevProps.isAuth){
-            console.log(this.props.isAuth, 'COMPONENTDIDUPDATE')
         }
     }
     render () {

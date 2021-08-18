@@ -10,7 +10,6 @@ import closeIcon from '../../../../images/cross.png'
 
 
 const MainAccountSettings =({activateSettings,menuToggle,profileData,...props})=>{
-    console.log(profileData, 'profileDATA')
     return(
         <div className={classes.settingsDefault}>
             <div className={classes.onPrevious}>

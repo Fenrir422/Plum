@@ -12,7 +12,6 @@ const Reader =({addFragment,...props})=> {
   const [pageNumber, setPageNumber] = useState(1);
   const [selectedText, setSelectedText] = useState(false);
 
-  console.log(props, 'reader')
   useEffect (() => {
     document.addEventListener("selectionchange", onMouseUp)
     return () => {document.removeEventListener("selectionchange", onMouseUp)}

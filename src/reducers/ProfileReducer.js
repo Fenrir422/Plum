@@ -89,7 +89,6 @@ export const setMainPhotoThunkCreator = (photoFile)=> {
 export const setProfileDataThunk = (profileData)=>  
     async (dispatch, getState)=> {
         const userId = getState().authStore.id
-        console.log(userId, 'ne ponyav blyat')
         debugger;
         let response = await ProfileApi.SetProfile(profileData);
             if(response.data.resultCode === 0){

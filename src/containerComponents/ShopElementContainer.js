@@ -8,7 +8,6 @@ import ADD_LIKE_ACTION_CREATOR from '../actionCreators/addLikeActionCreator'
 
 
 let mapStateToProps = (store) => {
-    console.log('анука', store)
     return {
         bookShopList: store.booksShopStore.bookShopList,
         reviewList: store.booksShopStore.reviewList,

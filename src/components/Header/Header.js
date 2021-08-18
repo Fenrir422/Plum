@@ -3,9 +3,6 @@ import { NavLink } from 'react-router-dom';
 import classes from './Header.module.css';
 
 function Header({fullName,...props}) {
-  console.log(props, 'asf ')
-
-
   return (
     <div className={classes.nav}>
       <div className={classes.upperNav}>

@@ -7,7 +7,6 @@ import BookStoreItem from './StoreItem/BookShopItem'
  
 
 function BookStoreGroup(props) {
-  console.log('shop', props)
   const BookStoreElement = props.booksShopStore.bookStoreList.map (l => 
     <BookStoreItem writer={l.writer} name={l.name} description={l.description} id={l.id} coverURL={l.coverURL}/>);
     return (

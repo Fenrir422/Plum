@@ -8,7 +8,6 @@ import ShopElementContainer from '../../../containerComponents/ShopElementContai
  
 
 function BookStore(props) {
-  console.log('store', props)
     return (
       <div className={classes.page_holder}>
         <BookShopMenu />

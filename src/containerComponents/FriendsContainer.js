@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Friends from '../components/page-holder/Friends/Friends'
 import toggleIsFetching from '../actionCreators/FetchingAC';
 import followingInProgress from '../actionCreators/FollowingInProgress'
-import { setFriendsThunk, unfollowThunkCreator, followThunkCreator} from '../reducers/friendsListReducer';
+import { setFriendsThunk, unfollowThunkCreator, followThunkCreator} from '../reducers/usersReducer';
 
 class FriendsAPI extends React.Component {
     

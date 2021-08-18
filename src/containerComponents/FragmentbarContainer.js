@@ -5,7 +5,6 @@ import Fragmentbar from '../components/page-holder/Page/Fragment/Fragmentbar';
 
 
 let mapStateToProps = (store) => {
-    console.log(store.fragmentsStore.fragment, ' ВИВЕДИСЬ ПЛЕС')
     return {
         fragments: store.fragmentsStore.fragments
     }

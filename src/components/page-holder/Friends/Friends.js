@@ -9,7 +9,6 @@ import Loader from '../../common/FormControl/Loader/Loader';
 
 
 const Friends = (props) => {
-    console.log(props.users)
 
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
     let pages = [];
